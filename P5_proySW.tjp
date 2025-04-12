@@ -70,7 +70,7 @@ resource dev3 "Peter Green" {
 }
 
 resource dev4 "Alberto Solaz" {
-  email "your.email@example.com"
+  email "873373@unizar.es"
   workinghours 4
 }
 
