@@ -307,6 +307,30 @@ textreport frame "" {
   }
 }
 
+# Point 4
+textreport initialPlanning "Initial Planning" {
+  formats html
+  title "Initial Project Planning Report"
+  center '<[report id="initialPlanningReport"]>'
+}
+
+taskreport initialPlanningReport "" {
+  scenarios plan
+  headline "Initial Planning – Project Plan"
+  columns bsi { title 'WBS' },
+          name,
+          start,
+          end,
+          effort,
+          cost,
+          revenue,
+          chart { ${TaskTip} }
+  timeformat "%a %Y-%m-%d"
+  loadunit days
+  hideresource @all
+  caption 'This report displays the project planning as originally defined (baseline scenario).'
+}
+
 # A traditional Gantt chart with a project overview.
 taskreport overview "" {
   scenarios actual
