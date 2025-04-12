@@ -334,7 +334,7 @@ taskreport initialPlanningReport "" {
   timeformat "%a %Y-%m-%d"
   loadunit days
   hideresource @all
-  caption 'This report displays the project planning as originally defined (baseline scenario).'
+  caption 'This report displays Point 4.'
 }
 
 # A traditional Gantt chart with a project overview.
