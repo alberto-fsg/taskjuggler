@@ -147,6 +147,7 @@ task WMGame "Web & Mobile Game" {
     }    
   }
 
+  # Start of point 1
   task tmobileF "Mobile Front End" {
     purge chargeset
     chargeset mFront
@@ -188,6 +189,7 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.tcloud.tCloudEval
     }
   }
+  # End of point 1
 
   task ttest "Acceptance tests" {
       effort 10d
@@ -197,6 +199,7 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.twebF
       depends WMGame.tback
       depends WMGame.tmobileF
+      start 2025-05-15 # Point 2
       }
 
     
