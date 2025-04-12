@@ -71,7 +71,8 @@ resource dev3 "Peter Green" {
 
 resource dev4 "Alberto Solaz" {
   email "873373@unizar.es"
-  dailyworkinghours 4
+  workinghours mon-fri 08:00-12:00
+  workinghours sat-sun off
 }
 
 
