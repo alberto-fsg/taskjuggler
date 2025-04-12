@@ -69,6 +69,12 @@ resource dev3 "Peter Green" {
   email "kkk@unizar.es"
 }
 
+resource dev4 "Alberto Solaz" {
+  email "your.email@example.com"
+  units 0.5 # Media jornada
+}
+
+
 # Now we specify the work packages. The whole project is described as
 # a task that contains subtasks. These subtasks are then broken down
 # into smaller tasks and so on. The innermost tasks describe the real
@@ -93,7 +99,7 @@ task WMGame "Web & Mobile Game" {
       # Point 3
       journalentry 2025-04-12 "Incidencia de práctica: Actualización de la fecha del informe" {
         author boss
-        summary "Se ha actualizado la fecha del informe al 12 de abril de 2025 para reflejar el día de desarrollo de la práctica."
+        summary "Ensure correct functionality of Point 3."
     }
   }
 
@@ -106,7 +112,7 @@ task WMGame "Web & Mobile Game" {
     task tBEd "Back End General Design" {
       # The effort to finish this task is 5 man-days.
       effort 5d
-      allocate dev1
+      allocate dev1, dev4
     }
     task tlogic "Game logic" {
       effort 12d
@@ -134,7 +140,7 @@ task WMGame "Web & Mobile Game" {
     task tGUId "Web GUI Design" {
       effort 9d
       actual:effort 15d
-      allocate dev3
+      allocate dev3, dev4
       journalentry 2025-01-15 "Problems with the GUI design tool" {
         author dev3
         alert yellow
@@ -174,7 +180,7 @@ task WMGame "Web & Mobile Game" {
 
     task tMFEt "Mobile Front End Testing" {
     effort 3d
-    allocate dev2
+    allocate dev2, dev4
     depends WMGame.tmobileF.tMFEc
     }
   }
