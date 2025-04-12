@@ -19,7 +19,7 @@ project pSix "Web Game"  2024-12-15 +6m { # Extended for Point 2
   # the project reports. If not specified, the current day will be
   # used, but this will likely be outside of the project range, so it
   # can't be seen in the reports.
-  now 2025-02-25-13:00
+  now 2025-04-12-11:00 # Point 3
   # The currency for all money values is the US Dollar.
   currency "EUR"
 
@@ -89,6 +89,12 @@ task WMGame "Web & Mobile Game" {
       effort 2d
       allocate boss
       depends WMGame.deliveries.start
+
+      # Point 3
+      journalentry 2025-04-12 "Incidencia de práctica: Actualización de la fecha del informe" {
+        author boss
+        summary "Se ha actualizado la fecha del informe al 12 de abril de 2025 para reflejar el día de desarrollo de la práctica."
+    }
   }
 
   task tback "Back End" {
@@ -157,6 +163,7 @@ task WMGame "Web & Mobile Game" {
     task tMUID "Mobile UI/UX Design" {
       effort 2d
       allocate dev3
+      depends WMGame.tgdesign
     }
 
     task tMFEc "Mobile Front End Construction" {
